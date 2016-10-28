@@ -1,0 +1,40 @@
+<div ng-controller="CartController">
+	<table class="table">
+		<tr>
+			<th><input type="checkbox" ng-model="checkAll" ng-checked="isBool" ng-click="check()"></th>
+			<th>编号</th>
+            <th>商品名</th>
+            <th>图片</th>
+            <th>价格</th>
+            <th>数量</th>
+            <th>小计价格</th>
+            <th>操作</th>
+		</tr>
+		<tr ng-repeat="cart in cartlist">
+			<td>
+                <input type="checkbox" ng-checked="checkAll" ng-model="cart.isCheck">
+            </td>
+            <td>{{cart.id}}</td>
+            <td>{{cart.title}}</td>
+            <td><img ng-src="{{cart.pic}}" width="100" alt=""></td>
+            <td>{{cart.price}}</td>
+            <td>
+                <!-- 4件商品，4个按钮，点击按钮，减去对应商品的数量 -->
+                <button ng-click="jian($index)">-</button>
+                <input type="number" ng-model="cart.num">
+                <button ng-click="jia($index)">+</button>
+            </td>
+            <td>{{(cart.price*cart.num).toFixed(2)}}</td>
+            <td>
+                <button ng-click="del($index)">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">总数量</td>
+            <td>{{total.num}}</td>
+            <td colspan="2">总价格</td>
+            <td colspan="2">{{total.price.toFixed(2)}}</td>
+        </tr>
+		</tr>
+	</table>
+</div>

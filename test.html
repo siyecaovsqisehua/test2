@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    var arr = [{
+        id: 41,
+        username: "zhangsan"
+    }, {
+        id: 22,
+        username: "lisi"
+    }, {
+        id: 33,
+        username: "wangwu"
+    }, {
+        id: 48,
+        username: "zhaoliu"
+    }];
+
+    // 需求:告诉id的值(33),获取对应对象的索引值
+    var num = 48;
+
+    // 程序不可能直接获取id的对应的索引,一个一个元素的去问(循环遍历)
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i]['id'] == num) {
+            console.log(i);
+        }
+    }
+    </script>
+</body>
+
+</html>

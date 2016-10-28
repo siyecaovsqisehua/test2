@@ -1,0 +1,8 @@
+[
+    { "id": 1, "title": "臭豆腐", "price": 3.99, "pic": "images/1.jpg" },
+    { "id": 2, "title": "豆腐干", "price": 2.99, "pic": "images/2.jpg" },
+    { "id": 3, "title": "豆腐脑", "price": 3.99, "pic": "images/3.jpg" },
+    { "id": 4, "title": "臭豆腐1", "price": 4.99, "pic": "images/4.jpg" },
+    { "id": 5, "title": "臭豆腐2", "price": 5.99, "pic": "images/5.jpg" },
+    { "id": 6, "title": "臭豆腐3", "price": 6.99, "pic": "images/4.jpg" }
+]

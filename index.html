@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShopModule">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <h3 class="text-center">我的项目</h3>
+    <div class="container">
+        <div class="row" ng-controller="IndexController">
+            <div class="col-md-3">
+                <div class="list-group">
+                    <a href="#/index" class="list-group-item active">首页</a>
+                    <a href="#/shop" class="list-group-item">商品列表页</a>
+                    <a href="#/cart" class="list-group-item">购物车页面<span class="badge">{{cartlist.length}}</span></a>
+                    <!-- 商品的类型数量由cartlist的元素数量决定 -->
+                </div>
+            </div>
+            <!-- ng-view创建自定义指令 -->
+            <div class="col-md-9" ng-view>
+            </div>
+        </div>
+    </div>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="fly/dist/jquery.fly.min.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+
+</html>

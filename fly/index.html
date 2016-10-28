@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="dist/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="dist/jquery.fly.min.js"></script>
+    <style type="text/css">
+    #src {
+        width: 200px;
+        height: 200px;
+        background: red;
+        margin: 200px;
+    }
+
+    .fly {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        background: blue;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="src"></div>
+    <script type="text/javascript">
+    jQuery(function($) {
+        $('#src').click(function(e) {
+            $('<div class="fly"></div>').fly({
+                start: {
+                    left: e.pageX, //开始位置（必填）新创建的div元素会被设置成position: fixed
+                    top: e.pageY, //开始位置（必填）
+                },
+                end: {
+                    left: 1200, //结束位置（必填）
+                    top: 300, //结束位置（必填）
+                    // width: 100, //结束时高度
+                    // height: 100, //结束时高度
+                },
+                // autoPlay: false, //是否直接运动,默认true
+                speed: 1.1, //越大越快，默认1.2
+                vertex_Rtop: 100, //运动轨迹最高点top值，默认20
+                onEnd: function() {
+                        console.log('商品添加成功')
+                        $('.fly').remove();
+                    } //结束回调
+            })
+        })
+
+    });
+    </script>
+</body>
+
+</html>

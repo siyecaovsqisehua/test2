@@ -1,0 +1,15 @@
+<div ng-controller="ShopController">
+    <div class="row">
+        <div class="col-md-4" ng-repeat="shop in shoplist">
+            <div class="thumbnail">
+                <img ng-src="{{shop.pic}}" alt="...">
+                <div class="caption">
+                    <h3>{{shop.title}}</h3>
+                    <p>{{shop.price}}</p>
+                    <!-- $index:shoplist的索引 -->
+                    <p><a href="javascript:;" ng-click="addCart(shop.id,$event)" class="btn btn-primary" role="button">添加到购物车</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
